@@ -5,8 +5,7 @@ angular
     .module('Constants', [])
 
     .constant('apiFrom', {
-        // 'api': 'http://support.elvee.in'
-        'api': 'http://192.168.0.146:1357'
+        'api': ''
     })
     .constant('orderStatus', {
         'SUCCESS': '1',
