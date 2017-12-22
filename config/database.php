@@ -88,31 +88,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => '192.168.0.200',
-//            'host' => '139.162.27.117',
-            'port' => 27017,
-//            'username' => 'elveeChatUser',
-//            'password' => 'elveeChat0!2#4',
-            'database' => 'PALAK_DESIGN_CHAT'
         ],
-
-//        'mongodb' => [
-//            'driver' => 'mongodb',
-//            'host' => '103.232.124.147',
-//            'port' => '27017',
-//            'username' => '',
-//            'password' => '',
-//            'database' => 'PALAK_DESIGN_CHAT'
-//        ],
-
-       /* 'mongodb' => [
-            'driver' => 'mongodb',
-            'host' => '139.162.34.149',
-            'port' => 27017,
-            'username' => '',
-            'password' => '',
-            'database' => 'ccc_demo'
-        ],*/
 
     ],
 
