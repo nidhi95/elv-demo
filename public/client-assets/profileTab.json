@@ -1,0 +1,595 @@
+{
+  "my_profile": null,
+  "my_policy": [
+    {
+      "tab": "raw_material",
+      "sub_tab": [
+        {
+          "tab": "gold",
+          "filter": {
+            "date": true,
+            "search": true,
+            "status": true
+          },
+          "filterCls": {
+            "date": "col-md-3",
+            "status": "col-md-3",
+            "search": "col-md-3"
+          },
+          "url": "getPolicyData",
+          "header": [
+            "Sr#",
+            "Date",
+            "Voucher",
+            "Account Name",
+            "Transaction",
+            "Amount",
+            "Waiver",
+            "Tax Amount",
+            "Status",
+            "Remarks",
+            "Download",
+            "View",
+            "Verified"
+          ]
+        },
+        {
+          "tab": "diamond",
+          "filter": {
+            "shape": true,
+            "search": true
+          },
+          "filterCls": {
+            "date": "col-md-3",
+            "status": "col-md-3",
+            "search": "col-md-3"
+          },
+          "url": "getPolicyData",
+          "header": [
+            "Sr#",
+            "Shape",
+            "Quality",
+            "Color",
+            "Size",
+            "Rate/Ctw"
+          ]
+        },
+        {
+          "tab": "color_stone",
+          "url": "getPolicyData",
+          "filterCls": {
+            "date": "col-md-4",
+            "search": "col-md-4"
+          },
+          "filter": {
+            "shape": true,
+            "search": true
+          },
+          "header": [
+            "Sr#",
+            "Shape",
+            "Quality",
+            "Color",
+            "Size",
+            "Rate/Ctw"
+          ]
+        }
+      ]
+    },
+    {
+      "tab": "labour",
+      "url": "getCharges"
+    },
+    {
+      "tab": "others",
+      "url": "null"
+    }
+  ],
+  "quotation": [
+    {
+      "tab": "quotes",
+      "url": "getQuotes",
+      "filter": {
+        "date": true
+      },
+      "requestParams": {
+        "type": "summary"
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Date",
+        "SKU",
+        "Total Design",
+        "Stock",
+        "Print"
+      ]
+    },
+    {
+      "tab": "jobs",
+      "url": "getQuotes",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "requestParams": {
+        "type": "detail"
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Category",
+        "Design No",
+        "Metal Weight",
+        "Gross Weight",
+        "Diamond Weight",
+        "Color Stone Weight"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "tab": "orders",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "url": "getOrders",
+      "header": [
+        "Sr#",
+        "Date",
+        "Order No.",
+        "Orders",
+        "Status",
+        "Print"
+      ]
+    },
+    {
+      "tab": "jobs",
+      "url": "getJobs",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Order Date",
+        "Delivery Date",
+        "Order No",
+        "Job",
+        "Design",
+        "Status",
+        "Print"
+      ]
+    }
+  ],
+  "status": [
+    {
+      "tab": "quotes",
+      "url": "getQuotes",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Date",
+        "SKU",
+        "Total Design",
+        "Stock",
+        "Print"
+      ]
+    },
+    {
+      "tab": "jobs",
+      "url": "getJobs",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Date",
+        "SKU",
+        "Job",
+        "Design",
+        "Category",
+        "PO",
+        "Status",
+        "Print"
+      ]
+    },
+    {
+      "tab": "orders",
+      "filter": {
+        "date": false,
+        "search": true
+      },
+      "filterCls": {
+        "search": "col-md-4"
+      },
+      "url": "getOrders",
+      "header": [
+        "Sr#",
+        "Date",
+        "SKU",
+        "PO",
+        "Orders",
+        "Status",
+        "Print"
+      ]
+    }
+  ],
+  "sales": [
+    {
+      "tab": "invoice",
+      "url": "getSalesData",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Date",
+        "Invoice",
+        "Total Items",
+        "Print",
+        "Verified"
+      ]
+    },
+    {
+      "tab": "product",
+      "url": "getSalesReport",
+      "filter": {
+        "date": true,
+        "search": true
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "header": [
+        "Sr#",
+        "Date",
+        "Invoice",
+        "Design",
+        "Collection"
+      ]
+    }
+  ],
+  "raw_material_stock": [
+    {
+      "tab": "metal",
+      "sub_tab": [
+        {
+          "tab": "all",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Purity",
+            "Type",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "stock",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Purity",
+            "Type",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "wip",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Purity",
+            "Type",
+            "Weight"
+          ]
+        }
+      ]
+    },
+    {
+      "tab": "diamond",
+      "sub_tab": [
+        {
+          "tab": "all",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "stock",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "wip",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        }
+      ]
+    },
+    {
+      "tab": "stone",
+      "sub_tab": [
+        {
+          "tab": "all",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Shape",
+            "Quality-Color",
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "stock",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Shape",
+            "Quality-Color",
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        },
+        {
+          "tab": "wip",
+          "url": "getRawMaterialStock",
+          "header": [
+            "Shape",
+            "Quality-Color",
+            "Size",
+            "Pcs",
+            "Weight"
+          ]
+        }
+      ]
+    }
+  ],
+  "account": [
+    {
+      "tab": "transaction",
+      "sub_tab": [
+        {
+          "tab": "cash",
+          "filter": {
+            "date": true,
+            "search": true,
+            "status": true
+          },
+          "filterCls": {
+            "date": "col-md-3",
+            "status": "col-md-3",
+            "search": "col-md-3"
+          },
+          "url": "getCashTransactionList",
+          "header": [
+            "Sr#",
+            "Date",
+            "Voucher",
+            "Account Name",
+            "Transaction",
+            "Amount",
+            "Waiver",
+            "Tax Amount",
+            "Status",
+            "Remarks",
+            "Download",
+            "View",
+            "Verified"
+          ]
+        },
+        {
+          "tab": "bank",
+          "filter": {
+            "date": true,
+            "search": true,
+            "status": true
+          },
+          "filterCls": {
+            "date": "col-md-3",
+            "status": "col-md-3",
+            "search": "col-md-3"
+          },
+          "url": "getBankTransactionList",
+          "header": [
+            "Sr#",
+            "Date",
+            "Voucher",
+            "Account Name",
+            "Bank Name",
+            "Transaction",
+            "Amount",
+            "Waiver",
+            "Tax Amount",
+            "Status",
+            "Remarks",
+            "Download",
+            "View",
+            "Verified"
+          ]
+        },
+        {
+          "tab": "contra",
+          "url": "getContraTransactionList",
+          "filterCls": {
+            "date": "col-md-4",
+            "search": "col-md-4"
+          },
+          "filter": {
+            "date": true,
+            "search": true,
+            "status": false
+          },
+          "header": [
+            "Sr#",
+            "Date",
+            "Voucher No",
+            "Dr Account",
+            "Dr Amount",
+            "Cr Account",
+            "Cr Amount"
+          ]
+        }
+      ]
+    },
+    {
+      "tab": "ledger",
+      "url": "getLedgerData",
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "filter": {
+        "date": true,
+        "search": true,
+        "status": false
+      },
+      "header": [
+        "Date",
+        "Particular",
+        "Voucher No",
+        "Metal",
+        "Diamond",
+        "Amount",
+        "Verified"
+      ]
+    },
+    {
+      "filter": {
+        "date": true,
+        "search": false,
+        "date_type": true,
+        "status": false
+      },
+      "filterCls": {
+        "date": "col-md-4",
+        "date_type": "col-md-4"
+      },
+      "tab": "party",
+      "url": "getPartyBalanceData",
+      "header": [
+        "Diamond",
+        "Clarity",
+        "Color",
+        "Size",
+        "Wt(ctw)"
+      ]
+    }
+  ],
+  "stock": [
+    {
+      "tab": "diamond",
+      "filter": {
+        "date": false,
+        "search": true,
+        "shape": true,
+        "date_type": false,
+        "status": false
+      },
+      "filterCls": {
+        "search": "col-md-4",
+        "shape": "col-md-4"
+      },
+      "url": "getDiamondStock",
+      "header": [
+        "Sr#",
+        "Shape",
+        "Clarity",
+        "Color",
+        "Size",
+        "Pcs",
+        "Wt(ctw)"
+      ]
+    },
+    {
+      "tab": "wip",
+      "filter": {
+        "date": false,
+        "search": true,
+        "shape": true,
+        "date_type": false,
+        "status": false
+      },
+      "filterCls": {
+        "search": "col-md-4",
+        "shape": "col-md-4"
+      },
+      "url": "getWipDiamondStock",
+      "header": [
+        "Sr#",
+        "Shape",
+        "Clarity",
+        "Color",
+        "Size",
+        "Pcs",
+        "Wt(ctw)"
+      ]
+    }
+  ],
+  "ledger": [
+    {
+      "tab": "ledger",
+      "url": "getLedgerData",
+      "filterCls": {
+        "date": "col-md-4",
+        "search": "col-md-4"
+      },
+      "filter": {
+        "date": true,
+        "search": true,
+        "status": false
+      },
+      "header": [
+        "Date",
+        "Particular",
+        "Voucher No",
+        "Metal",
+        "Diamond",
+        "Amount",
+        "Verified"
+      ]
+    }
+  ]
+}
