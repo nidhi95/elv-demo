@@ -1,0 +1,1894 @@
+{
+  "info": {
+    "name": "Node app1",
+    "_postman_id": "af6e6d0b-dc66-4c91-9826-1e5ce04a0e1b",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "description": "Custom action test - Route method",
+      "item": [
+        {
+          "name": "adminRoutes",
+          "description": "",
+          "item": [
+            {
+              "name": "/admin/clientele/custome-route2",
+              "request": {
+                "url": "http://localhost:3000/admin/admin/clientele/custome-route2",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "/admin/clientele/custome-route",
+              "request": {
+                "url": "http://localhost:3000/admin/admin/clientele/custome-route",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "common",
+      "description": "Common routes",
+      "item": [
+        {
+          "name": "File Upload",
+          "description": "Upload Files",
+          "item": [
+            {
+              "name": "File upload in common",
+              "request": {
+                "url": "http://localhost:3000/common/upload",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file[]",
+                      "type": "file",
+                      "description": "Select file to upload"
+                    },
+                    {
+                      "key": "file[]",
+                      "type": "file",
+                      "disabled": true,
+                      "description": "Select Another file to upload multiple files"
+                    },
+                    {
+                      "key": "folder",
+                      "value": "Enter foldername",
+                      "type": "text",
+                      "disabled": true,
+                      "description": "Optional, enable to upload file to specific folder"
+                    },
+                    {
+                      "key": "fileName",
+                      "value": "Enter fileName",
+                      "type": "text",
+                      "disabled": true,
+                      "description": "Optional, enable to give Specific file name to uploaded File"
+                    }
+                  ]
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "description": "Admin APIs",
+      "item": [
+        {
+          "name": "Master",
+          "description": "Master Model APIs",
+          "item": [
+            {
+              "name": "addMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Carole Greenfelder\",\n  \"normalizeName\": \"SQL\",\n  \"slug\": \"Applications\",\n  \"code\": \"leading-edge\",\n  \"group\": \"partnerships\",\n  \"description\": \"Stream\",\n  \"isActive\": true,\n  \"isDefault\": false,\n  \"sortingSequence\": 47,\n  \"image\": \"Shilling\",\n  \"icon\": \"orchestrate\",\n  \"parentId\": \"60b77279275e4e05ab79abd0\",\n  \"subMasters\": \"60b77279275e4e05ab79abd1\",\n  \"isDeleted\": true,\n  \"homeId\": \"60b77279275e4e05ab79abd2\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/60b77279275e4e05ab79abd3",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getMasterCount",
+              "request": {
+                "url": "http://localhost:3000/admin/master/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/update/60b77279275e4e05ab79abd3",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Carole Greenfelder\",\n  \"normalizeName\": \"SQL\",\n  \"slug\": \"Applications\",\n  \"code\": \"leading-edge\",\n  \"group\": \"partnerships\",\n  \"description\": \"Stream\",\n  \"isActive\": true,\n  \"isDefault\": false,\n  \"sortingSequence\": 47,\n  \"image\": \"Shilling\",\n  \"icon\": \"orchestrate\",\n  \"parentId\": \"60b77279275e4e05ab79abd0\",\n  \"subMasters\": \"60b77279275e4e05ab79abd1\",\n  \"isDeleted\": true,\n  \"homeId\": \"60b77279275e4e05ab79abd2\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/partial-update/60b77279275e4e05ab79abd3",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/softDelete/60b77279275e4e05ab79abd3",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Carole Greenfelder\",\n      \"normalizeName\": \"SQL\",\n      \"slug\": \"Applications\",\n      \"code\": \"leading-edge\",\n      \"group\": \"partnerships\",\n      \"description\": \"Stream\",\n      \"isActive\": true,\n      \"isDefault\": false,\n      \"sortingSequence\": 47,\n      \"image\": \"Shilling\",\n      \"icon\": \"orchestrate\",\n      \"parentId\": \"60b77279275e4e05ab79abd0\",\n      \"subMasters\": \"60b77279275e4e05ab79abd1\",\n      \"isDeleted\": true,\n      \"homeId\": \"60b77279275e4e05ab79abd2\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteMaster",
+              "request": {
+                "url": "http://localhost:3000/admin/master/delete/60b77279275e4e05ab79abd3",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "Clinetele",
+          "description": "Clinetele Model APIs",
+          "item": [
+            {
+              "name": "addClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"application\",\n  \"krollId\": 298,\n  \"phone\": \"991-429-1551 x414\",\n  \"name\": \"Brandy Bashirian\",\n  \"type\": 910,\n  \"isDeleted\": true,\n  \"isActive\": false,\n  \"image\": \"Factors\",\n  \"website\": \"Clothing\",\n  \"parentId\": \"60b77279275e4e05ab79abd4\",\n  \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n  \"organizationId\": \"60b77279275e4e05ab79abd6\",\n  \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n  \"assignedDeviceImei\": \"Bike\",\n  \"uniqueNo\": \"back\",\n  \"pharmacyPrinter\": \"didactic\",\n  \"settings\": \"bandwidth-monitored\",\n  \"draftDiscardHours\": 646,\n  \"careClause\": \"granular\",\n  \"storeId\": 504,\n  \"isKroll\": true,\n  \"eHR\": \"HTTP\",\n  \"facId\": 620,\n  \"bedCount\": 531,\n  \"lineOfBusiness\": \"Associate\",\n  \"healthType\": 161,\n  \"facilityCode\": \"redundant\",\n  \"environment\": \"system\",\n  \"billingStyleCountry\": \"compressing\",\n  \"timeZone\": \"quantify\",\n  \"headOffice\": \"extend\",\n  \"floorDesc\": \"Vermont\",\n  \"floorId\": 221,\n  \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n  \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n  \"stlCode\": \"Rhode\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/60b77279275e4e05ab79abda",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getClineteleCount",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/update/60b77279275e4e05ab79abda",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"application\",\n  \"krollId\": 298,\n  \"phone\": \"991-429-1551 x414\",\n  \"name\": \"Brandy Bashirian\",\n  \"type\": 910,\n  \"isDeleted\": true,\n  \"isActive\": false,\n  \"image\": \"Factors\",\n  \"website\": \"Clothing\",\n  \"parentId\": \"60b77279275e4e05ab79abd4\",\n  \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n  \"organizationId\": \"60b77279275e4e05ab79abd6\",\n  \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n  \"assignedDeviceImei\": \"Bike\",\n  \"uniqueNo\": \"back\",\n  \"pharmacyPrinter\": \"didactic\",\n  \"settings\": \"bandwidth-monitored\",\n  \"draftDiscardHours\": 646,\n  \"careClause\": \"granular\",\n  \"storeId\": 504,\n  \"isKroll\": true,\n  \"eHR\": \"HTTP\",\n  \"facId\": 620,\n  \"bedCount\": 531,\n  \"lineOfBusiness\": \"Associate\",\n  \"healthType\": 161,\n  \"facilityCode\": \"redundant\",\n  \"environment\": \"system\",\n  \"billingStyleCountry\": \"compressing\",\n  \"timeZone\": \"quantify\",\n  \"headOffice\": \"extend\",\n  \"floorDesc\": \"Vermont\",\n  \"floorId\": 221,\n  \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n  \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n  \"stlCode\": \"Rhode\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/partial-update/60b77279275e4e05ab79abda",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/softDelete/60b77279275e4e05ab79abda",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"code\": \"application\",\n      \"krollId\": 298,\n      \"phone\": \"991-429-1551 x414\",\n      \"name\": \"Brandy Bashirian\",\n      \"type\": 910,\n      \"isDeleted\": true,\n      \"isActive\": false,\n      \"image\": \"Factors\",\n      \"website\": \"Clothing\",\n      \"parentId\": \"60b77279275e4e05ab79abd4\",\n      \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n      \"organizationId\": \"60b77279275e4e05ab79abd6\",\n      \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n      \"assignedDeviceImei\": \"Bike\",\n      \"uniqueNo\": \"back\",\n      \"pharmacyPrinter\": \"didactic\",\n      \"settings\": \"bandwidth-monitored\",\n      \"draftDiscardHours\": 646,\n      \"careClause\": \"granular\",\n      \"storeId\": 504,\n      \"isKroll\": true,\n      \"eHR\": \"HTTP\",\n      \"facId\": 620,\n      \"bedCount\": 531,\n      \"lineOfBusiness\": \"Associate\",\n      \"healthType\": 161,\n      \"facilityCode\": \"redundant\",\n      \"environment\": \"system\",\n      \"billingStyleCountry\": \"compressing\",\n      \"timeZone\": \"quantify\",\n      \"headOffice\": \"extend\",\n      \"floorDesc\": \"Vermont\",\n      \"floorId\": 221,\n      \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n      \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n      \"stlCode\": \"Rhode\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteClinetele",
+              "request": {
+                "url": "http://localhost:3000/admin/clinetele/delete/60b77279275e4e05ab79abda",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "adduser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/60b77279275e4e05ab79abdb",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": "http://localhost:3000/admin/user/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/update/60b77279275e4e05ab79abdb",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/partial-update/60b77279275e4e05ab79abdb",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": "http://localhost:3000/admin/user/softDelete/60b77279275e4e05ab79abdb",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "Admin Login",
+          "item": [
+            {
+              "name": "Login in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/auth/login",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/user/change-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"60b77279275e4e05ab79abdc\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/auth/forgot-password",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/auth/validate-otp",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/auth/reset-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in Admin",
+              "request": {
+                "url": "http://localhost:3000/admin/auth/register",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Device",
+      "description": "Device APIs",
+      "item": [
+        {
+          "name": "Master",
+          "description": "Master Model APIs",
+          "item": [
+            {
+              "name": "addMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Carole Greenfelder\",\n  \"normalizeName\": \"SQL\",\n  \"slug\": \"Applications\",\n  \"code\": \"leading-edge\",\n  \"group\": \"partnerships\",\n  \"description\": \"Stream\",\n  \"isActive\": true,\n  \"isDefault\": false,\n  \"sortingSequence\": 47,\n  \"image\": \"Shilling\",\n  \"icon\": \"orchestrate\",\n  \"parentId\": \"60b77279275e4e05ab79abd0\",\n  \"subMasters\": \"60b77279275e4e05ab79abd1\",\n  \"isDeleted\": true,\n  \"homeId\": \"60b77279275e4e05ab79abd2\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getMasterCount",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Carole Greenfelder\",\n  \"normalizeName\": \"SQL\",\n  \"slug\": \"Applications\",\n  \"code\": \"leading-edge\",\n  \"group\": \"partnerships\",\n  \"description\": \"Stream\",\n  \"isActive\": true,\n  \"isDefault\": false,\n  \"sortingSequence\": 47,\n  \"image\": \"Shilling\",\n  \"icon\": \"orchestrate\",\n  \"parentId\": \"60b77279275e4e05ab79abd0\",\n  \"subMasters\": \"60b77279275e4e05ab79abd1\",\n  \"isDeleted\": true,\n  \"homeId\": \"60b77279275e4e05ab79abd2\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/partial-update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/softDelete/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Carole Greenfelder\",\n      \"normalizeName\": \"SQL\",\n      \"slug\": \"Applications\",\n      \"code\": \"leading-edge\",\n      \"group\": \"partnerships\",\n      \"description\": \"Stream\",\n      \"isActive\": true,\n      \"isDefault\": false,\n      \"sortingSequence\": 47,\n      \"image\": \"Shilling\",\n      \"icon\": \"orchestrate\",\n      \"parentId\": \"60b77279275e4e05ab79abd0\",\n      \"subMasters\": \"60b77279275e4e05ab79abd1\",\n      \"isDeleted\": true,\n      \"homeId\": \"60b77279275e4e05ab79abd2\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteMaster",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/master/delete/undefined",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "Clinetele",
+          "description": "Clinetele Model APIs",
+          "item": [
+            {
+              "name": "addClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"application\",\n  \"krollId\": 298,\n  \"phone\": \"991-429-1551 x414\",\n  \"name\": \"Brandy Bashirian\",\n  \"type\": 910,\n  \"isDeleted\": true,\n  \"isActive\": false,\n  \"image\": \"Factors\",\n  \"website\": \"Clothing\",\n  \"parentId\": \"60b77279275e4e05ab79abd4\",\n  \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n  \"organizationId\": \"60b77279275e4e05ab79abd6\",\n  \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n  \"assignedDeviceImei\": \"Bike\",\n  \"uniqueNo\": \"back\",\n  \"pharmacyPrinter\": \"didactic\",\n  \"settings\": \"bandwidth-monitored\",\n  \"draftDiscardHours\": 646,\n  \"careClause\": \"granular\",\n  \"storeId\": 504,\n  \"isKroll\": true,\n  \"eHR\": \"HTTP\",\n  \"facId\": 620,\n  \"bedCount\": 531,\n  \"lineOfBusiness\": \"Associate\",\n  \"healthType\": 161,\n  \"facilityCode\": \"redundant\",\n  \"environment\": \"system\",\n  \"billingStyleCountry\": \"compressing\",\n  \"timeZone\": \"quantify\",\n  \"headOffice\": \"extend\",\n  \"floorDesc\": \"Vermont\",\n  \"floorId\": 221,\n  \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n  \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n  \"stlCode\": \"Rhode\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getClineteleCount",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"application\",\n  \"krollId\": 298,\n  \"phone\": \"991-429-1551 x414\",\n  \"name\": \"Brandy Bashirian\",\n  \"type\": 910,\n  \"isDeleted\": true,\n  \"isActive\": false,\n  \"image\": \"Factors\",\n  \"website\": \"Clothing\",\n  \"parentId\": \"60b77279275e4e05ab79abd4\",\n  \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n  \"organizationId\": \"60b77279275e4e05ab79abd6\",\n  \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n  \"assignedDeviceImei\": \"Bike\",\n  \"uniqueNo\": \"back\",\n  \"pharmacyPrinter\": \"didactic\",\n  \"settings\": \"bandwidth-monitored\",\n  \"draftDiscardHours\": 646,\n  \"careClause\": \"granular\",\n  \"storeId\": 504,\n  \"isKroll\": true,\n  \"eHR\": \"HTTP\",\n  \"facId\": 620,\n  \"bedCount\": 531,\n  \"lineOfBusiness\": \"Associate\",\n  \"healthType\": 161,\n  \"facilityCode\": \"redundant\",\n  \"environment\": \"system\",\n  \"billingStyleCountry\": \"compressing\",\n  \"timeZone\": \"quantify\",\n  \"headOffice\": \"extend\",\n  \"floorDesc\": \"Vermont\",\n  \"floorId\": 221,\n  \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n  \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n  \"stlCode\": \"Rhode\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/partial-update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/softDelete/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"code\": \"application\",\n      \"krollId\": 298,\n      \"phone\": \"991-429-1551 x414\",\n      \"name\": \"Brandy Bashirian\",\n      \"type\": 910,\n      \"isDeleted\": true,\n      \"isActive\": false,\n      \"image\": \"Factors\",\n      \"website\": \"Clothing\",\n      \"parentId\": \"60b77279275e4e05ab79abd4\",\n      \"pharmacyId\": \"60b77279275e4e05ab79abd5\",\n      \"organizationId\": \"60b77279275e4e05ab79abd6\",\n      \"parentPharmacyId\": \"60b77279275e4e05ab79abd7\",\n      \"assignedDeviceImei\": \"Bike\",\n      \"uniqueNo\": \"back\",\n      \"pharmacyPrinter\": \"didactic\",\n      \"settings\": \"bandwidth-monitored\",\n      \"draftDiscardHours\": 646,\n      \"careClause\": \"granular\",\n      \"storeId\": 504,\n      \"isKroll\": true,\n      \"eHR\": \"HTTP\",\n      \"facId\": 620,\n      \"bedCount\": 531,\n      \"lineOfBusiness\": \"Associate\",\n      \"healthType\": 161,\n      \"facilityCode\": \"redundant\",\n      \"environment\": \"system\",\n      \"billingStyleCountry\": \"compressing\",\n      \"timeZone\": \"quantify\",\n      \"headOffice\": \"extend\",\n      \"floorDesc\": \"Vermont\",\n      \"floorId\": 221,\n      \"pccOrgId\": \"60b77279275e4e05ab79abd8\",\n      \"imagingDiagnosticId\": \"60b77279275e4e05ab79abd9\",\n      \"stlCode\": \"Rhode\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteClinetele",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/clinetele/delete/undefined",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "adduser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/partial-update/undefined",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer Your-token",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "Device Login",
+          "item": [
+            {
+              "name": "Login in Device",
+              "request": {
+                "url": "http://localhost:3000/device/auth/login",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in Device",
+              "request": {
+                "url": "http://localhost:3000/device/api/v1/user/change-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"60b77279275e4e05ab79abdd\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in Device",
+              "request": {
+                "url": "http://localhost:3000/device/auth/forgot-password",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in Device",
+              "request": {
+                "url": "http://localhost:3000/device/auth/validate-otp",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in Device",
+              "request": {
+                "url": "http://localhost:3000/device/auth/reset-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in Device",
+              "request": {
+                "url": "http://localhost:3000/device/auth/register",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Vanessa Orn I\",\n  \"age\": 16,\n  \"isActive\": true,\n  \"dob\": \"2021-09-02T23:33:52.638Z\",\n  \"name\": \"Dr. Kristin Olson\",\n  \"isDeleted\": false,\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
